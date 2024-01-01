@@ -1,0 +1,12 @@
+digraph Tree {
+    node [fontname="Arial"];
+    "1234567890" [label="Enrollment: 1234567890\nName: John\nDate: 2022-01-11, Status: P\nDate: 2022-01-06, Status: A\nDate: 2022-01-01, Status: P\n"];
+    "1234567890" -> "2345678901";
+    "2345678901" [label="Enrollment: 2345678901\nName: Jane\nDate: 2022-01-12, Status: A\nDate: 2022-01-07, Status: P\nDate: 2022-01-02, Status: A\n"];
+    "2345678901" -> "3456789012";
+    "3456789012" [label="Enrollment: 3456789012\nName: Bob\nDate: 2022-01-13, Status: P\nDate: 2022-01-08, Status: A\nDate: 2022-01-03, Status: P\n"];
+    "3456789012" -> "4567890123";
+    "4567890123" [label="Enrollment: 4567890123\nName: Alice\nDate: 2022-01-14, Status: A\nDate: 2022-01-09, Status: P\nDate: 2022-01-04, Status: P\n"];
+    "4567890123" -> "5678901234";
+    "5678901234" [label="Enrollment: 5678901234\nName: Charlie\nDate: 2022-01-15, Status: A\nDate: 2022-01-10, Status: P\nDate: 2022-01-05, Status: A\n"];
+}

@@ -1,0 +1,28 @@
+/* Style all paragraphs */
+p {
+    color: blue;
+    font-size: 20px;
+}
+
+/* Style the element with id "myId" */
+#myId {
+    border: 1px solid black;
+}
+
+/* Style elements with class "myClass" when they are hovered over */
+.myClass:hover {
+    background-color: yellow;
+}
+
+/* Style the first letter of each paragraph */
+p::first-letter {
+    font-size: 30px;
+    color: red;
+}
+
+/* Apply styles when the viewport is 600px or less */
+@media (max-width: 600px) {
+    body {
+        background-color: rgb(25, 185, 238);
+    }
+}
