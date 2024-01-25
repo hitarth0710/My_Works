@@ -259,19 +259,47 @@ Node* RBTree::getRoot() {
     return root;
 }
 
-int main() {
-    RBTree tree;
+void levelOrder(Node *root) {
+    if (root == nullptr)
+        return;
 
-    tree.insert(7);
-    tree.insert(6);
-    tree.insert(5);
-    tree.insert(4);
-    tree.insert(3);
-    tree.insert(2);
-    tree.insert(1);
+    std::queue<Node *> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        Node *temp = q.front();
+        q.pop();
+
+        std::cout << temp->data << " ";
+
+        if (temp->left != nullptr)
+            q.push(temp->left);
+
+        if (temp->right != nullptr)
+            q.push(temp->right);
+    }
+}
+
+int main() {
+    
+    RBTree tree;
+    int n, val;
+
+    cout << "Enter the number of elements to be inserted: ";
+    cin >> n;
+
+    cout << "Enter the elements: ";
+    for(int i = 0; i < n; i++) {
+        cin >> val;
+        tree.insert(val);
+    }
 
     cout << "Inorder Traversal of Created Tree\n";
     tree.inorder();
+    cout<<endl;
+
+    std::cout << "Level Order Traversal of Created Tree\n";
+    levelOrder(tree.getRoot());
 
     generateDotFile(tree.getRoot(), "tree.dot");
 
