@@ -85,6 +85,7 @@ void dequeue()
     }
     cout<<"The Element "<<x<<" is Dequeued."<<endl;
 }
+
 void display()
 {
     if(front == -1 && rear == -1) {
@@ -98,5 +99,4 @@ void display()
         cout<<a[i]<<'\t';
     }
     cout<<a[rear]<<endl;
-
 }
