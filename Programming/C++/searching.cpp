@@ -5,7 +5,7 @@ using namespace std;
 #define size 5
 int *arr = new int[size];
 
-void linearsearch(int );
+int linearsearch(int );
 void binarysearch(int );
 
 int main()
@@ -31,10 +31,17 @@ int main()
         switch(c)
         {
             case 1:
-                int x;
+                int x,t;
                 cout<<"Enter the element you want to search :";
                 cin>>x;
-                linearsearch(x);
+                t=linearsearch(x);
+                if(t)
+                {
+                    cout<<"Element not found"<<endl;
+                }
+                else{
+                    cout<<"Element found at index "<<t<<"."<<endl;
+                }
                 break;
             case 2:
                 int y;
@@ -54,18 +61,20 @@ int main()
     return 0;
 }
 
-void linearsearch(int data)
+int linearsearch(int data)
 {
-    int i=0;
+    int i;
     for(i=0;i<size;i++)
     {
-       if(data == arr[i])
+       if(arr[i] == data)
        {
-          cout<<"Match Found..."<<endl;
-          cout<<"Your Value is found at index postion "<<i<<"."<<endl;
+          return i;
        } 
     }
-    cout << "Element not found in the array." << endl;
+    if (i)
+    {
+        return -1;
+    }
 }
 
 void binarysearch(int data)
