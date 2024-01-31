@@ -11,7 +11,7 @@ struct node* getnode(int x);
 struct node* append(struct node* , struct node* );
 struct node* insertatfront(struct node* ,int );
 struct node* insertatend(struct node* ,int );
-
+struct node* insertAtPosition(int ,int ,struct node* );
 
 int main()
 {
@@ -23,7 +23,8 @@ int main()
         cout<<"2.Display"<<endl;
         cout<<"3.Insert at front"<<endl;
         cout<<"4.insert at end"<<endl;
-        cout<<"5.EXIT"<<endl;
+        cout<<"5.Insert at POSITION"<<endl;
+        cout<<"6.EXIT"<<endl;
         cout<<"Enter Your choice :";
         int c;
         cin>>c;
@@ -67,6 +68,12 @@ int main()
                 end = insertatend(end,y1);
                 break;
             case 5:
+                int pos,val;
+                cout<<"Enter the Position :";cin>>pos;
+                cout<<"Enter the value :";cin>>val;
+                start = insertAtPosition(val,pos,start);
+                break;
+            case 6:
                 running = false;
                 break;
             default:
@@ -124,4 +131,31 @@ struct node* insertatend(struct node* end, int x)
         end->next=ptr;
     }
     return ptr;
+}
+
+struct node *insertAtPosition(int value, int position, struct node *start)
+{
+    if(position == 1){
+        struct node *ptr = new node;
+        ptr->data=value;
+        ptr->next=start;
+        return ptr;
+    }
+
+    struct node *current = start;
+    for(int i=1;i<position - 1 && current != NULL;i++){
+        current = current->next;
+    }
+
+    if(current == NULL)
+    {
+        return start;
+    }
+
+    struct node *ptr = new node;
+    ptr->data=value;
+    ptr->next=current->next;
+    current->next=ptr;
+
+    return start;
 }
