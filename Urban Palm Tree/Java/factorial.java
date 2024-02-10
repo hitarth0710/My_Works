@@ -5,14 +5,14 @@ public class factorial {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a positive integer: ");
         int num = scanner.nextInt();
-        System.out.println("Factorial of " + num + " = " + factorial(num));
+        System.out.println("Factorial of " + num + " = " + factorial1(num));
     }
 
-    public static int factorial(int n) {
+    public static int factorial1(int n) {
         if (n == 0) {
             return 1;
         } else {
-            return n * factorial(n - 1);
+            return n * factorial1(n - 1);
         }
     }
 }
