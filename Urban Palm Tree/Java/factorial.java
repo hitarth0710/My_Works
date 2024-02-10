@@ -6,6 +6,7 @@ public class factorial {
         System.out.print("Enter a positive integer: ");
         int num = scanner.nextInt();
         System.out.println("Factorial of " + num + " = " + factorial1(num));
+        scanner.close();
     }
 
     public static int factorial1(int n) {

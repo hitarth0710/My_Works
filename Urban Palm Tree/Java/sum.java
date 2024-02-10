@@ -7,6 +7,7 @@ public class sum {
         int num = scanner.nextInt();
         int sum = sumOfNNumbers(num);
         System.out.println("Sum of first " + num + " numbers is: " + sum);
+        scanner.close();
     }
 
     public static int sumOfNNumbers(int n) {
