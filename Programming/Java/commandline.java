@@ -1,4 +1,4 @@
-public class prac
+public class commandline
 {
   public static void main(String args[])
   {
