@@ -4,12 +4,12 @@ public class factorial {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a positive integer: ");
-        int num = scanner.nextInt();
+        long num = scanner.nextLong();
         System.out.println("Factorial of " + num + " = " + factorial1(num));
         scanner.close();
     }
 
-    public static int factorial1(int n) {
+    public static long factorial1(long n) {
         if (n == 0) {
             return 1;
         } else {
