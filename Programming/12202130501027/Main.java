@@ -48,6 +48,12 @@ class BankAccount {
     public int getAccNo() {
         return this.accountNumber;
     }
+    public void displayAccountInfo() {
+        System.out.println("Account Number: " + this.accountNumber);
+        System.out.println("Depositor Name: " + this.depositorName);
+        System.out.println("Account Type: " + this.accountType);
+        System.out.println("Balance: " + this.balance);
+    }
 }
 
 public class Main {

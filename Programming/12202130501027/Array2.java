@@ -36,6 +36,7 @@ class Matrix {
                 mat[i][j] = scanner.nextFloat();
             }
         }
+        scanner.close();
     }
 
     float[][] transpose() {

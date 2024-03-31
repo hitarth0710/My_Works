@@ -118,15 +118,17 @@ public class array
 {
     public static void main(String args[])
     {
-         Scanner s = new Scanner(System.in);//System.in is for to get input form console
-         Arrex a1 = new Arrex();
-          // a1.display();
-         Arrex a2 = new Arrex(9);
-        // a2.display();
-         int a[] = {12,23,43,54,65,76,34,76,27,45,76,45};
-         Arrex a3 = new Arrex(a);
-         a3.sum();
-
+      try (Scanner s = new Scanner(System.in)) {
+        Arrex a1 = new Arrex();
+        a1.display();
+        System.out.println("Enter the size of the array:");
+        int size = s.nextInt();
+        Arrex a2 = new Arrex(size);
+        a2.display();
+        int a[] = {12,23,43,54,65,76,34,76,27,45,76,45};
+        Arrex a3 = new Arrex(a);
+        a3.sum();
+      }
     }
 
 }
