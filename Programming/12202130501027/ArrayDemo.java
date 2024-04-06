@@ -1,3 +1,4 @@
+
 class Array {
 
     int data[] = new int[10]; 
