@@ -46,20 +46,6 @@ public class CricketDemo {
         {
             mat[i].display();
         }
-        /* ALTERNATE LOGIC
-         *  int count = 0;
-        for (int i = 0; i < matches.length; i++) {
-            matches[i] = new Match();
-            matches[i].setData(Integer.parseInt(args[count]), args[count + 1], Integer.parseInt(args[count + 2]), Integer.parseInt(args[count + 3]));
-            count += 4;
-        }
-
-        for (Match match : matches) {
-            match.display();
-            }
-        }
-         * 
-         */
 
     }
 }
