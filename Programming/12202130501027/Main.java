@@ -40,6 +40,8 @@ class BankAccount {
 
     public void balanceInquiry() {
         System.out.println("Account Balance: " + balance);
+        System.out.println("Type of account is "+accType);
+        System.out.println("Account holder's name :"+depositorName);
     }
 }
 
@@ -106,5 +108,6 @@ public class Main {
                     System.out.println("Invalid choice.");
             }
         } while (choice != 5);
+        scanner.close();
     }
 }
