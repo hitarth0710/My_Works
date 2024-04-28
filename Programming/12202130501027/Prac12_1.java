@@ -3,10 +3,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class Prac12 extends JFrame {
+class Prac12_1 extends JFrame {
     private JTextField tfAmount, tfYears, tfRate, tfFutureValue;
 
-    public Prac12() {
+    public Prac12_1() {
         // Create labels and text fields
         JLabel lblAmount = new JLabel("Investment Amount");
         tfAmount = new JTextField(10);
@@ -58,7 +58,7 @@ class Prac12 extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Prac12();
+        new Prac12_1();
     }
 }
 

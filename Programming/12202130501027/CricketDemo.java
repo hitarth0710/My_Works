@@ -33,18 +33,17 @@ class Match extends Cricket{
 }
 
 public class CricketDemo {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
-        Match mat[];
+        Match[] mat;
         mat = new Match[5];
         for(int i=0;i<mat.length;i++)
         {
             mat[i] = new Match();
             mat[i].setdata(Integer.parseInt(args[i*4]), args[i*4 + 1], Integer.parseInt(args[i*4 + 2]), Integer.parseInt(args[i*4 + 3]));
         }
-        for(int i=0;i<mat.length;i++)
-        {
-            mat[i].display();
+        for (Match match : mat) {
+            match.display();
         }
 
     }
