@@ -3,7 +3,7 @@ import java.io.File;
 public class Prac10_3 {
     public static void main(String[] args) {
         // The directory to list files for
-        String directoryPath = "C:\\Users\\rajes\\OneDrive\\Desktop\\java files"; // replace "yourDirectory" with your directory path
+        String directoryPath = "C:\\Users\\rajes\\OneDrive\\Desktop\\java files";
 
         File directory = new File(directoryPath);
 

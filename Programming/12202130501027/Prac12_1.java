@@ -31,7 +31,7 @@ class Prac12_1 extends JFrame {
         });
 
         // Add components to the frame
-        setLayout(new FlowLayout());
+        setLayout(new GridLayout(5,2));
         add(lblAmount);
         add(tfAmount);
         add(lblYears);
@@ -57,7 +57,8 @@ class Prac12_1 extends JFrame {
         tfFutureValue.setText(String.format("%.2f", futureValue));
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         new Prac12_1();
     }
 }

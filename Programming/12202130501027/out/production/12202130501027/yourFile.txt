@@ -1,4 +1,4 @@
 Hello, this is a test file.
 This file is used to test the word count program.
-The word 'test' is repeated in this file.
+The word test is repeated in this file.
 This is the end of the file.

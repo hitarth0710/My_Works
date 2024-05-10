@@ -2,7 +2,7 @@ public class commandline
 {
   public static void main(String args[])
   {
-    for (String arg : rgs)a
+    for (String arg : args)
         {
             System.out.println(arg);
         }

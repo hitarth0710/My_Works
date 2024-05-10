@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Prac10_1 {
     public static void main(String[] args) {
         // The word to count occurrences for
-        String targetWord = "test"; // replace "yourWord" with the word you want to count
+        String targetWord = "test";
 
         // The file to read from
-        File file = new File("yourFile.txt"); // replace "yourFile.txt" with your file path
+        File file = new File("yourFile.txt");
 
         // A map to store word counts
         Map<String, Integer> wordCounts = new HashMap<>();

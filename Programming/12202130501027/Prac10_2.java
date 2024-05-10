@@ -1,6 +1,14 @@
-public class Prac10_2 {
-    public static void main(String[] args) {
-        String program = "public class Prac10_2 {\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println(program);\n\t}\n}";
-        System.out.println(program);
+import java.io.*;
+import java.util.Scanner;
+//Write a program to print it self.
+class readingFile {
+    public static void main(String[] args) throws IOException,FileNotFoundException {
+        FileReader fileReader = new FileReader("C:\\STUDY\\STUDY\\Programming\\12202130501027\\Prac10_1.java");
+        Scanner scan = new Scanner(fileReader);
+        while(scan.hasNextLine())
+        {
+            System.out.println(scan.nextLine());
+        }
+        scan.close();
     }
 }
