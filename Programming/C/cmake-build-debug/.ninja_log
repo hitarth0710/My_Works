@@ -1,0 +1,10 @@
+# ninja log v5
+10	148	7372107853152442	CMakeFiles/C.dir/bubblesort.c.obj	559c7157fbe5c179
+21	155	7372107853202453	CMakeFiles/C.dir/diwan2.c.obj	7fc1fff3576f4e28
+16	178	7372107853392416	CMakeFiles/C.dir/diwan.c.obj	b73807c5122e2346
+31	213	7372107853777777	CMakeFiles/C.dir/diwan3.c.obj	c7f6a6723e6d7e8a
+37	244	7372107854067759	CMakeFiles/C.dir/examques1.c.obj	23fea9c0c699707b
+155	290	7372107854577869	CMakeFiles/C.dir/examques2geeks.c.obj	f00cd95140f482a5
+149	316	7372107854803042	CMakeFiles/C.dir/examques2.c.obj	b1e4fc58c5de67db
+213	318	7372107854883055	CMakeFiles/C.dir/findamgstrongnumber.c.obj	16a492951165ea43
+5	650	7372107858209336	CMakeFiles/C.dir/NETWORKING/2.2.cpp.obj	57906f9f1ab61c07
