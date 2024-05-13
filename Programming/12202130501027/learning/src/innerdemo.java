@@ -1,4 +1,4 @@
-class outer {
+class outer2 {
     private int x = 10;
     private int Y = 20;
 
@@ -24,7 +24,7 @@ class outer {
 
 public class innerdemo {
     public static void main(String[] args) {
-        outer outer = new outer();
+        outer2 outer = new outer2();
         outer.createAndPrintX(); // prints 10
         outer.createAndPrintY(); // prints 20
     }
