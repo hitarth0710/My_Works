@@ -38,12 +38,10 @@ These problem sets should help you practice exception handling in Java at differ
 
 /*
 problem 1 :-(solution)
- */
-import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
-public class Exception
-{
+public class ExceptionHandling extends Throwable {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -59,6 +57,230 @@ public class Exception
             System.out.println("Invalid Input");
         }finally{
             sc.close();
+        }
+    }
+}
+*/
+
+/*
+problem 2
+
+import java.util.Scanner;
+
+class OutofBoundsException extends Exception
+{
+    OutofBoundsException(String msg)
+    {
+        super(msg);
+    }
+}
+
+public class ExceptionHandling
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int[] a = {45, 46, 23, 67, 12, 12};
+        //System.out.println("The length of array is "+a.length);
+        System.out.println("Enter the index you want to you want to access in array: ");
+        int n = sc.nextInt();
+        try
+        {
+            if(n<0 || n>=a.length)
+            {
+                throw new OutofBoundsException("Index out of Bounds");
+            }
+            for (int i = 0; i < a.length; i++)
+            {
+                if (i == n)
+                {
+                    System.out.println("Element found at index " + i + " is " + a[i]);
+                }
+            }
+        }catch(OutofBoundsException e){
+            System.out.println(e.getMessage());
+        }finally {
+            sc.close();
+        }
+    }
+}
+
+method 2 for problem 2
+import java.util.Scanner;
+
+public class ExceptionHandling {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numbers;
+        int targetValue;
+
+        System.out.print("Enter the size of the array: ");
+        int n = sc.nextInt();
+        numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.printf("Enter element %d: ", i);
+            numbers[i] = sc.nextInt();
+        }
+
+        System.out.print("Enter the target value: ");
+        targetValue = sc.nextInt();
+
+        try {
+            for (int i = 0; i < n; i++) {
+                if (numbers[i] == targetValue) {
+                    System.out.println(String.format("Target value found at index %d", i));
+                }
+            }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Invalid index");
+        } finally {
+            sc.close();
+        }
+    }
+}
+*/
+
+/*
+problem 3
+
+import java.util.Scanner;
+
+class ArithmeticException extends Exception
+{
+    ArithmeticException(String msg)
+    {
+        super(msg);
+    }
+}
+
+public class ExceptionHandling
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a: ");
+        int a = sc.nextInt();
+        System.out.println("Enter b: ");
+        int b = sc.nextInt();
+
+        try{
+            if(a<0 || b<0)
+            {
+                throw new ArithmeticException("Elements are negative numbers");
+            }
+            else if(b == 0)
+            {
+                throw new ArithmeticException("second number cannot be zero because it is division");
+            }
+            int res,div,mul,sub;
+            res = a+b;
+            System.out.println("Their sum is "+res);
+            sub = a-b;
+            System.out.println("Their difference is "+sub);
+            mul = a*b;
+            System.out.println("Their product is "+mul);
+            div = a/b;
+            System.out.println("Their quetioent is "+div);
+
+        }catch(ArithmeticException e){
+            System.out.println(e.getMessage());
+        }finally{
+            sc.close();
+        }
+    }
+}
+*/
+
+/*
+problem 4
+
+import java.util.Scanner;
+
+class ArithmeticException extends Exception
+{
+    ArithmeticException(String msg)
+    {
+        super(msg);
+    }
+}
+
+public class ExceptionHandling
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        double[] ele;
+
+        try{
+            System.out.print("Enter the total number of element: ");
+            int n = sc.nextInt();
+            ele = new double[n];
+            if(n==0)
+            {
+                throw new ArithmeticException("cannot enter negative or zero");
+            }
+            for(int i=0;i<n;i++)
+            {
+                System.out.print("Enter "+(i+1)+" element");
+                ele[i] = sc.nextDouble();
+            }
+            try{
+                double avg=0;
+                for(int i=0;i<n;i++)
+                {
+                    if(ele[i]<0)
+                    {
+                        throw new ArithmeticException("Elements cannot be negative");
+                    }
+                    avg+=ele[i];
+                }
+                double res=avg/n;
+                System.out.println("The average is "+res);
+            }catch(ArithmeticException e){
+                System.out.println(e.getMessage());
+            }
+        }catch(ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }finally{
+            sc.close();
+        }
+    }
+}
+
+ */
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+class IOException extends Exception
+{
+    IOException(String msg)
+    {
+        super(msg);
+    }
+}
+
+public class ExceptionHandling
+{
+    public static void main(String[] args)
+    {
+        BufferedReader reader = null;
+        try{
+            reader = new BufferedReader(new FileReader("test.txt"));
+            String line = null;
+            if(reader.readLine() == null)
+            {
+                throw new IOException("file is empty");
+            }
+            while((line = reader.readLine()) != null)
+            {
+                System.out.println(line);
+            }
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }finally{
+
         }
     }
 }

@@ -14,6 +14,7 @@ class Anonymous
             public void display()
             {
                 System.out.println("Inside an anonymous class.");
+                //display1();
             }
         };
         p1.display();
@@ -26,7 +27,5 @@ public class anonymousdemo
     {
         Anonymous obj = new Anonymous();
         obj.createClass();
-        Polygon p = new Polygon();
-        p.display();
     }
 }
