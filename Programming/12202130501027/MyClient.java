@@ -5,9 +5,10 @@ import java.io.*;
 class MyClient{  
 public static void main(String args[])throws Exception{  
 String sockin;
+Socket csock = null;
 try
 {
-    Socket csock = new Socket(InetAddress.getLocalHost(),2000);
+    csock = new Socket(InetAddress.getLocalHost(),2000);
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedReader br_sock = new BufferedReader(new InputStreamReader(csock.getInputStream()));
     PrintStream ps = new PrintStream(csock.getOutputStream());
@@ -24,12 +25,12 @@ try
 }
 catch(UnknownHostException e)
 {
-System.out.println(e.toString());
-
+    System.out.println(e.toString());
 }
-catch(IOException ioe)
-{
-System.out.println(ioe);
+finally {
+    if (csock != null) {
+        csock.close();
+    }
 }
 }
 }  

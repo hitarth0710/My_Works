@@ -29,9 +29,6 @@ public static void main(String args[])throws Exception{
     {
         System.out.println(e.toString());
     }
-    catch(IOException ioe)
-    {
-        System.out.println(ioe);
-    }
+    // Remove the catch block for IOException
 }     
 }  

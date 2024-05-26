@@ -1,6 +1,6 @@
 import mpkg.*;
 
-public class sam {
+public class sam_pakimp {
   public static void main(String args[]) {
    /* Because Balance is public, you may use Balance
        class and call its constructor. */
