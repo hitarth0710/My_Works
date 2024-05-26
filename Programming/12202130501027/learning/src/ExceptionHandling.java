@@ -265,22 +265,6 @@ public class ExceptionHandling
 {
     public static void main(String[] args)
     {
-        BufferedReader reader = null;
-        try{
-            reader = new BufferedReader(new FileReader("test.txt"));
-            String line = null;
-            if(reader.readLine() == null)
-            {
-                throw new IOException("file is empty");
-            }
-            while((line = reader.readLine()) != null)
-            {
-                System.out.println(line);
-            }
-        }catch(IOException e){
-            System.out.println(e.getMessage());
-        }finally{
 
-        }
     }
 }
