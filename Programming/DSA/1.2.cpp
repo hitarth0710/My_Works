@@ -12,7 +12,7 @@ int main()
     {
         cin>>p[i];
     }
-    int temp[n];
+    int *temp = new int[n];
     int j=0;
     for(i=0;i<n-1;i++)
     {
