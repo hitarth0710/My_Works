@@ -1,0 +1,85 @@
+/* Base styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Container for content */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Main header */
+header {
+    background: #50a3a2;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #077187 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* Styling for navigation bar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+    background: #333;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #ddd;
+    color: #333;
+}
+
+/* Styling for articles */
+article {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+/* Subtle shadow for articles */
+article:hover {
+    box-shadow: 0 0 5px #ccc;
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Smooth transition for link hover effects */
+a {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header, .container, nav {
+        width: 90%;
+    }
+}
