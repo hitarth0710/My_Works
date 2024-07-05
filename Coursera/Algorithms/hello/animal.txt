@@ -1,8 +1,0 @@
-zebra
-lion
-elehpant
-dog
-cat
-mouse
-bat
-bear

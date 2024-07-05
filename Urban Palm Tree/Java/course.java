@@ -3,38 +3,38 @@ public class course {
     public static void main(String[] args) {
         String output = "";
 
-  int x = 2;
+        int x = 2;
 
-  switch(x){
+        switch (x) {
 
-  case 1:
+            case 1:
 
-  case 2:
+            case 2:
 
-  case 3:
+            case 3:
 
-   output += "one,two,three,";
+                output += "one,two,three,";
 
-  case 4:
+            case 4:
 
-   output += "four,";
+                output += "four,";
 
-   break;
+                break;
 
-  case 5:
+            case 5:
 
-   output += "five,";
+                output += "five,";
 
-   break;
+                break;
 
-  default:
+            default:
 
-   output += "six";
+                output += "six";
 
-  output += "six";
+                output += "six";
 
-  }
+        }
 
-  System.out.println(output);
+        System.out.println(output);
     }
 }
