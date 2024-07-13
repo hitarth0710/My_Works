@@ -1,5 +1,23 @@
+import java.util.Scanner;
+
+class anything{
+    int n = 7;
+    anything(int n){
+        this.n=n;
+    }
+    boolean check(){
+        if(this.n == 7){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
 public class program {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
         int[] array = {1, 2, 3, 4, 5};
         int index = 2; // position where new element should be inserted
         int element = 6; // new element to be inserted
@@ -26,5 +44,8 @@ public class program {
         for (int i : newArray) {
             System.out.print(i + " ");
         }
+
+        sc.close();
+
     }
 }
