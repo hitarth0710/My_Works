@@ -118,5 +118,6 @@ def amstrong_num():
     else:
         print(f"{num2} is not a Amstrong Number.")
 
+
 if __name__ == "__main__":
     amstrong_num()
