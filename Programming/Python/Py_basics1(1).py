@@ -1,5 +1,3 @@
-import math
-
 
 def Hello():
     p = "Hello World"
@@ -88,6 +86,7 @@ def sentence():
     print(f"Lowercase letters: {lowercase}")
     print(f"Spaces: {spaces}")
 
+import math
 def is_prime(n):
     if n<=1:
         return False
@@ -121,3 +120,4 @@ def amstrong_num():
 
 if __name__ == "__main__":
     amstrong_num()
+
