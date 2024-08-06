@@ -1,42 +1,46 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+#include <stdio.h>
 
-int main()
-{
-    FILE *fi;
-    fi = fopen("numbers.txt","w");
-    if(fi == NULL)
-    {
-        printf("NO file.");
-        return 1;
-    }
+void quicksort(int n[], int p, int r);
+int partition(int n[], int p, int r);
+void swaping(int n[], int i, int j);
 
-    int limit = 300000;
-    int *arr = (int*)malloc(limit * sizeof(int));
-    if(arr == NULL)
-    {
-        printf("memoryy allocation failed");
-        return 1;
+int main() {
+    // Example usage
+    int arr[] = {10, 7, 8, 9, 1, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    quicksort(arr, 0, n - 1);
+    printf("Sorted array: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
     }
-    for (int  i= 0;i<limit;i++)
-    {
-        arr[i] = i;
-    }
-    srand(time(0));
-    for(int i = limit - 1;i>0;i--)
-    {
-        int j = rand()%(i+1);
-        int temp = arr[i];
-        arr[i]  = arr[j];
-        arr[j] = temp;
-    }
-    for(int i = 0;i<limit;i++)
-    {
-        fprintf(fi,"%d\n",arr[i]);
-    }
-    fclose(fi);
-    free(arr);
-    printf("file created");
+    printf("\n");
     return 0;
+}
+
+void quicksort(int n[], int p, int r) {
+    int q;
+    if (p < r) {
+        q = partition(n, p, r);
+        quicksort(n, p, q - 1);
+        quicksort(n, q + 1, r);
+    }
+}
+
+int partition(int n[], int p, int r) {
+    int x = n[r];
+    int i = p - 1;
+    for (int j = p; j <= r - 1; j++) {
+        if (n[j] <= x) {
+            i = i + 1;
+            swaping(n, i, j);
+        }
+    }
+    swaping(n, i + 1, r);
+    return (i + 1);
+}
+
+void swaping(int n[], int i, int j) {
+    int temp = n[i];
+    n[i] = n[j];
+    n[j] = temp;
 }

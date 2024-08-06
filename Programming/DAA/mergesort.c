@@ -70,9 +70,9 @@ int main()
     clock_t start3,end3;
     double cpu_time3;
 
-    start2 = clock();
+    start3 = clock();
     MergeSort(arr,p,r);
-    end2 = clock();
+    end3 = clock();
 
     cpu_time3 = ((double)end3 - start3)/CLOCKS_PER_SEC;
     printf("Time taken by reverse sorted input in MergeSort is %f.\n",cpu_time3);
