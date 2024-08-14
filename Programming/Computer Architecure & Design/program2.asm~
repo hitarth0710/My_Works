@@ -1,0 +1,11 @@
+lhld 2000
+xchg
+lhld 2004
+mov A,H
+sub d
+mov H,A
+mov A,L
+sub e
+mov L,A
+shld 2008
+hlt

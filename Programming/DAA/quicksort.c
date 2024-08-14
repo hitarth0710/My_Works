@@ -4,8 +4,7 @@
 
 void quicksort(int [], int , int);
 int partition(int[], int, int);
-void swaping(int[], int, int);
-void reverseArray(int [] , int );
+void reverseArray(int *, int );
 
 int main()
 {
@@ -102,13 +101,6 @@ int partition(int n[], int p, int r)
     n[r] = n[i+1] ; 
     n[i+1] = temp;
     return (i+1);
-}
-
-void swaping(int n[], int i, int j) 
-{
-    int temp = n[i];
-    n[i] = n[j];
-    n[j] = temp;
 }
 
 void reverseArray(int* arr, int size) 
