@@ -8,7 +8,7 @@ public class Practical1_2 {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection(URL,"root","mysql");
 
-        String Query = "insert into student values(?, ?, ?)";
+        String Query = "insert into students values(?, ?, ?)";
         PreparedStatement pstmt = con.prepareStatement(Query);
 
         System.out.println("How many student's information you want to enter: ");

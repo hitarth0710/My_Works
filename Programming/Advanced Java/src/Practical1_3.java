@@ -8,7 +8,7 @@ public class Practical1_3 {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection(URL,"root","mysql");
 
-        String query = "UPDATE student SET id = ? WHERE city = ?;";
+        String query = "UPDATE student SET id = ? WHERE name = ?;";
         PreparedStatement pstm = con.prepareStatement(query);
 
         System.out.println("How many rows you want to update: ");
@@ -23,7 +23,7 @@ public class Practical1_3 {
             id[i] = sc.nextInt();
             pstm.setInt(1, id[i]);
             sc.nextLine();
-            System.out.println("Enter the City: ");
+            System.out.println("Enter the Name: ");
             name[i] = sc.nextLine();
             pstm.setString(2, name[i]);
 
