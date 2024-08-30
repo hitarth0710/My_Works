@@ -1,6 +1,8 @@
 import java.sql.*;
 import java.util.Scanner;
 
+
+//MENU driven program of JDBC various queries
 public class exam1 {
 
     private static final String url = "jdbc:mysql://localhost:3306/hitarth";
@@ -22,16 +24,17 @@ public class exam1 {
             while (true) {
                 System.out.println("1. Creating the table");
                 System.out.println("2. Inserting the values in table");
-                System.out.println("3. Printing the table");
-                System.out.println("4. Exit");
+                System.out.println("3. Update the values in table");
+                System.out.println("4. Printing the table");
+                System.out.println("5. Exit");
                 System.out.print("Enter your choice: ");
                 int c = sc.nextInt();
                 switch (c) {
                     case 1:
                         //query to create table
-                        String crt_table = "CREATE TABLE IF NOT EXISTS mytable (" +
-                                "id INT PRIMARY KEY, " +
-                                "name VARCHAR(255))";
+                        String crt_table = "CREATE TABLE IF NOT EXISTS exam3 (" +
+                                "isbn INT PRIMARY KEY, " +
+                                "title VARCHAR(255), " + "author VARCHAR(255))";
                         boolean res = stmt.execute(crt_table);
                         if (res) {
                             System.out.println("Table created.");
@@ -64,6 +67,27 @@ public class exam1 {
                         }
                         break;
                     case 3:
+                        String Uquery = "UPDATE mytable SET name = ? WHERE id = ?;";
+                        PreparedStatement pstm = con.prepareStatement(Uquery);
+                        System.out.println("How many rows you want to update: ");
+                        int n2 = sc.nextInt();
+                        sc.nextLine();
+                        int[] id3 = new int[n2];
+                        String[] name3 = new String[n2];
+                        for (int i = 0;i<n2;i++)
+                        {
+                            System.out.println("Enter the Name: ");
+                            name3[i] = sc.nextLine();
+                            pstm.setString(1, name3[i]);
+                            System.out.println("Enter the id: ");
+                            id3[i] = sc.nextInt();
+                            pstm.setInt(2, id3[i]);
+                            sc.nextLine();
+                            int afr = pstm.executeUpdate();
+                            System.out.println("Rows Affected in updating is "+afr);
+                        }
+                        break;
+                    case 4:
                         // printing the whole table
                         String print_table = "select * from mytable";
                         Statement stmt1 = con.createStatement();
@@ -75,7 +99,7 @@ public class exam1 {
                             System.out.println(" Name :" + name2);
                         }
                         break;
-                    case 4:
+                    case 5:
                         con.close();
                         sc.close();
                         System.out.println("Exiting...");
