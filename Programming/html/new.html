@@ -1,6 +1,32 @@
 <html>
 <head>
+    <title></title>
+    <style type = "text/css">
+        div{
+            position : reaaltive;
+            height : 100px;
+            width : 100px;
+            background-color: red;
+            animation-name : example;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-direction: reverse;
+            animation-iteration-count:infinite;
+        }
+        @keyframes example{
+            /*from {background-color: red; top: 0px;left: 0px; }
+            to background-color: blue; top : 100px;left: 100px*/
+            0% {background-color: red;left:0px;top:0px}
+            25% {background-color: green;left:100px;top:0px}
+            50% {background-color: blue;left:100px;top:100px}
+            75% {background-color: yellow;left:0px;top:100px}
+            100% {background-color: red;left:0px;top:0px}
+        }
+    </style>
 </head>
 <body>
+    <p>Animation</p>
+    <div></div>
+   <p>When animation finished it id changed to original shape.</p>
 </body>
 </html>
