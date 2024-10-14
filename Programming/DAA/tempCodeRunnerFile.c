@@ -1,46 +1,32 @@
 #include <stdio.h>
-
-void quicksort(int n[], int p, int r);
-int partition(int n[], int p, int r);
-void swaping(int n[], int i, int j);
+#include <stdlib.h>
 
 int main() {
-    // Example usage
-    int arr[] = {10, 7, 8, 9, 1, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    quicksort(arr, 0, n - 1);
-    printf("Sorted array: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-    return 0;
-}
+    int r = 3, c = 4;
+    int** arr = (int**)malloc(r * sizeof(int*));
 
-void quicksort(int n[], int p, int r) {
-    int q;
-    if (p < r) {
-        q = partition(n, p, r);
-        quicksort(n, p, q - 1);
-        quicksort(n, q + 1, r);
+    for (int i = 0; i < r; i++) {
+        arr[i] = (int*)malloc(c * sizeof(int));
     }
-}
 
-int partition(int n[], int p, int r) {
-    int x = n[r];
-    int i = p - 1;
-    for (int j = p; j <= r - 1; j++) {
-        if (n[j] <= x) {
-            i = i + 1;
-            swaping(n, i, j);
+    int count = 0;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            arr[i][j] = ++count;
         }
     }
-    swaping(n, i + 1, r);
-    return (i + 1);
-}
 
-void swaping(int n[], int i, int j) {
-    int temp = n[i];
-    n[i] = n[j];
-    n[j] = temp;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (int i = 0; i < r; i++) {
+        free(arr[i]);
+    }
+    free(arr);
+
+    return 0;
 }
