@@ -10,14 +10,12 @@
      Welcome to Tomcat
   </description>
    
-   
-
     <servlet>
-    <servlet-name>index</servlet-name>
-    <servlet-class>index</servlet-class>
+    <servlet-name>practical4</servlet-name>
+    <servlet-class>practical4</servlet-class>
     </servlet>
     <servlet-mapping>
-    <servlet-name>index</servlet-name>
-    <url-pattern>/index</url-pattern>
+    <servlet-name>practical4</servlet-name>
+    <url-pattern>/practical4</url-pattern>
     </servlet-mapping>
 <web-app>
