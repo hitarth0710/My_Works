@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 
 //MENU driven program of JDBC various queries
-public class exam1 {
+public class jdbc_program {
 
-    private static final String url = "jdbc:mysql://localhost:3306/hitarth";
+    private static final String url = "jdbc:mysql://localhost:3306/<your_database _name>";
     private static final String username = "root";
-    private static final String password = "mysql";
+    private static final String password = "";
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -34,7 +34,7 @@ public class exam1 {
                 switch (c) {
                     case 1:
                         //query to create table
-                        String crt_table = "CREATE TABLE IF NOT EXISTS exam3 (" +
+                        String crt_table = "CREATE TABLE IF NOT EXISTS <your_table_name> (" +
                                 "isbn INT PRIMARY KEY, " +
                                 "title VARCHAR(255), " + "author VARCHAR(255))";
                         boolean res = stmt.execute(crt_table);
@@ -46,7 +46,7 @@ public class exam1 {
                         break;
                     case 2:
                         //inserting into table
-                        String Query = "insert into mytable values(?, ?)";
+                        String Query = "insert into <table_name> values(?, ?)";
                         PreparedStatement pstmt = con.prepareStatement(Query);
                         System.out.println("How many values you want to enter: ");
                         int n = sc.nextInt();
@@ -69,7 +69,7 @@ public class exam1 {
                         }
                         break;
                     case 3:
-                        String Uquery = "UPDATE mytable SET name = ? WHERE id = ?;";
+                        String Uquery = "UPDATE <table_name> SET name = ? WHERE id = ?;";
                         PreparedStatement pstm = con.prepareStatement(Uquery);
                         System.out.println("How many rows you want to update: ");
                         int n2 = sc.nextInt();
@@ -91,7 +91,7 @@ public class exam1 {
                         break;
                     case 4:
                         // printing the whole table
-                        String print_table = "select * from mytable";
+                        String print_table = "select * from <table_name>";
                         Statement stmt1 = con.createStatement();
                         ResultSet result = stmt1.executeQuery(print_table);
                         while(result.next()) {
@@ -102,7 +102,7 @@ public class exam1 {
                         }
                         break;
                     case 5:
-                        String search_student = "select * from mytable where id = ?;";
+                        String search_student = "select * from <table_name> where id = ?;";
                         PreparedStatement spstm = con.prepareStatement(search_student);
                         System.out.println("Enter the ID to search :");
                         int ids = sc.nextInt();
@@ -116,7 +116,7 @@ public class exam1 {
                         }
                         break;
                     case 6:
-                        String delete_student = "delete from mytable where id = ?;";
+                        String delete_student = "delete from <table_name> where id = ?;";
                         PreparedStatement dpstm = con.prepareStatement(delete_student);
                         System.out.println("Enter the Id you want to delete :");
                         int idd = sc.nextInt();

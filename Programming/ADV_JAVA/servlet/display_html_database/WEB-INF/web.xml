@@ -1,0 +1,69 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+   
+   
+
+    <servlet>
+    <servlet-name>index</servlet-name>
+    <servlet-class>index</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>index</servlet-name>
+    <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>AddStudent</servlet-name>
+    <servlet-class>AddStudent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>AddStudent</servlet-name>
+    <url-pattern>/AddStudent</url-pattern>
+
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>EditStudent</servlet-name>
+    <servlet-class>EditStudent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>EditStudent</servlet-name>
+    <url-pattern>/EditStudent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>DeleteStudent</servlet-name>
+    <servlet-class>DeleteStudent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DeleteStudent</servlet-name>
+      <url-pattern>/DeleteStudent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>SearchStudent</servlet-name>
+    <servlet-class>SearchStudent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>SearchStudent</servlet-name>
+    <url-pattern>/SearchStudent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>ViewAllStudents</servlet-name>
+    <servlet-class>ViewAllStudents</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>ViewAllStudents</servlet-name>
+    <url-pattern>/ViewAllStudents</url-pattern>
+    </servlet-mapping> 
+
+<web-app>

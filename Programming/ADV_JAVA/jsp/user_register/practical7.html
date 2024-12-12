@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/licensedefault.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html>
+
+<head>
+    <title>User Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <table style="min-height: 100vh; width: 100%; display: grid; justify-content: center;">
+        <form action="./userCreate.jsp" method="post">
+            <tr>
+                <td>
+                    <label for="">Enter FirstName: </label>
+                </td>
+                <td>
+                    <input type="text" name="fname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Enter MiddleName:</label>
+                </td>
+                <td>
+                    <input type="text" name="mname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Enter LastName: </label>
+                </td>
+                <td>
+                    <input type="text" name="lname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Enter Email-id:</label>
+                </td>
+                <td>
+                    <input type="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Enter Address:</label>
+                </td>
+                <td>
+                    <textarea name="address" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Gender: </label>
+                </td>
+                <td>
+                    Male <input type="radio" name="gen" value="male" id="">
+                    Female <input type="radio" name="gen" value="female" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" name="register">Submit</button>
+                    <a href="Display.jsp"><button>Show-All</button></a>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
