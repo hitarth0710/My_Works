@@ -6,7 +6,7 @@ public class exam4 {
     private static final String url = "jdbc:mysql://localhost:3306/transaction";
     private static final String username = "root";
     private static final String password = "mysql";
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
         Class.forName("com.mysql.cj.jdbc.Driver");
